@@ -27,9 +27,6 @@ for n in range(1, max_years + 1):
     # add discounted salvage
     pw += salvage / discount
 
-    # print intermediate debug (optional)
-    # print("n =", n, "PW =", round(pw, 4))
-
     if pw >= 0:
         print("Minimum life n (years) required:", n)
         print("Present worth at n =", n, "is approximately", round(pw, 4))

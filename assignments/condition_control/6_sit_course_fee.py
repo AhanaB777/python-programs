@@ -38,3 +38,35 @@ semester. 1st semester + Admission Fees=100000-10000=90000, remaining 7semester=
 10000)=4,54000.00. Male candidate no scholarship. No scholarship for directadmission.
 
 """
+# Simple implementation of CalculateSITcourseFees
+def CalculateSITcourseFees(course_code, TIGans, entrance_test, Male):
+    courses = {
+        1: (8, 100000, 75000),
+        2: (8, 70000, 50000),
+        3: (8, 70000, 50000),
+        4: (6, 60000, 45000),
+        5: (6, 50000, 30000),
+        6: (4, 140000, 100000),
+        7: (4, 120000, 80000),
+    }
+    sem, first_fee, rem_fee = courses[course_code]
+
+    if TIGans == 1:
+        per_sem = 10000 if course_code <= 5 else 15000
+        first = first_fee - per_sem
+        rem   = rem_fee - per_sem
+        total = first + (sem - 1) * rem
+    else:
+        admission_reduction = (15000 if entrance_test == 1 else 0) + (10000 if Male == 0 else 0)
+        first = first_fee - admission_reduction
+        total = first + (sem - 1) * rem_fee
+
+    return float(total)
+
+# Example
+if __name__ == '__main__' :
+    course_code=int(input("Enter course code: "))
+    TIGans=int(input("Whether TIGans? yes(1) or no(0): "))
+    entrance_test=int(input("Entrance test? yes(1) or no(0): "))
+    gender=int(input("Male(0) or Female(1): "))
+    print(f"{CalculateSITcourseFees(course_code,TIGans,entrance_test,gender):.2f}")  # prints 545000.00

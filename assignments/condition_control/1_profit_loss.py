@@ -13,4 +13,4 @@ elif cp>sp:
     loss=cp-sp
     print(f"The seller incurred loss of Rs. {loss}")
 else:
-    print("There is no loss and no profit")
+    print("There is no loss and no profit") 
