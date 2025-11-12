@@ -18,5 +18,5 @@ while count<=n :
         odd_sum+=value    
 
     count+=1
-print(even_sum)
-print(odd_sum)
+print(f"Sum of even terms is {even_sum}")
+print(f"Sum of  odd terms is {odd_sum}")
