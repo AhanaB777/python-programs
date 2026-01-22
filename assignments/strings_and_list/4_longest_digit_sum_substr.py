@@ -8,39 +8,39 @@ greater than the previous number's digit-sum. Print the subsequence (as original
 
 """
 s=input("Enter number separated by spaces: ").split()
-num_list=[]
+num=[]
 for i in s:
-    num_list.append(i)
-print("Original numbers: ",num_list)
+    num.append(i)
+print("Original numbers: ",num)
 
-d_sum=[]
-for i in num_list:
+ds=[]
+for i in num:
     s=0
     for d in i:
         s+=int(d)
-    d_sum.append(s)
-print("Digit sums: ",d_sum)
+    ds.append(s)
+print("Digit sums: ",ds)
 
 max_len = 1
 max_start = 0
 
-current_len = 1
-current_start = 0
+cur_len = 1
+cur_start = 0
 
-for i in range(1, len(d_sum)):
-    if d_sum[i] > d_sum[i-1]:
-        current_len += 1
+for i in range(1, len(ds)):
+    if ds[i] > ds[i-1]:
+        cur_len += 1
     else:
-        if current_len > max_len:
-            max_len = current_len
-            max_start = current_start
-        current_len = 1
-        current_start = i
-if current_len > max_len:
-    max_len = current_len
-    max_start = current_start
+        if cur_len > max_len:
+            max_len = cur_len
+            max_start = cur_start
+        cur_len = 1
+        cur_start = i
+if cur_len > max_len:
+    max_len = cur_len
+    max_start = cur_start
 
-ls= num_list[max_start:max_start+max_len]
+ls= num[max_start:max_start+max_len]
 
 print("Longest increasing-digit-sum subsequence:", ls)
 print("Length of subsequence:", max_len)

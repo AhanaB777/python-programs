@@ -21,8 +21,8 @@ while i<len(s1) and j<len(s2) :
     s3+=s1[i]+rev_s2[j]
     i+=1
     j+=1
-    if i<len(s1):
-        s3+=s1[i:]
+if i<len(s1):
+    s3+=s1[i:]
 if j<len(s2):
     s3+=rev_s2[j:]
 print(s3)
