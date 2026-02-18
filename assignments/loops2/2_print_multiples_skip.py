@@ -8,14 +8,23 @@ first multiple found, but print any subsequent multiples).
 the first. If fewer than two multiples, you might print none or just the later ones.
 
 """
-n=int(input("Enter a number n(number of terms) : "))
-k=int(input("Enter a number k(multiple of...) : "))
-result=""
-count=1
-while count<=n :
-    value=int(input("Enter a number : "))
+# n=int(input("Enter a number n(number of terms) : "))
+# k=int(input("Enter a number k(multiple of...) : "))
+# result=""
+# count=1
+# while count<=n :
+#     value=int(input("Enter a number : "))
 
-    if count !=1 and value%k==0 :
-        result=result+" "+str(value)    
-    count+=1
-print(f"Multiples of {k} are {result}")
+#     if count !=1 and value%k==0 :
+#         result=result+" "+str(value)    
+#     count+=1
+# print(f"Multiples of {k} are {result}")
+n=int(input("Enter value of n: "))
+k=int(input("Enter value of k: "))
+l=[]
+for i in range(n):
+    x=int(input(f"Enter number ({i+1}): "))
+    if x%k==0:
+        l.append(x)
+for i in range(1,len(l)):
+    print(l[i],end=" ")
