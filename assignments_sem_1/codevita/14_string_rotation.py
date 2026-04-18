@@ -1,8 +1,0 @@
-"""String Rotation 
-Rotate a given String in the specified direction by specified magnitude. 
-After each rotation make a note of the first character of the rotated String, After all rotation are performed the 
-accumulated first character as noted previously will form another string, say FIRSTCHARSTRING. 
-Check If FIRSTCHARSTRING is an Anagram of any substring of the Original string. 
-If yes print "YES" otherwise "NO". Input 
-The first line contains the original string s. The second line contains a single integer q. The ith of the next q 
-lines contains character d[i] denoting direction and integer r[i] denoting the magnitude."""
