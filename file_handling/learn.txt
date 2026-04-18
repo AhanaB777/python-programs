@@ -1,0 +1,11 @@
+so far the topics that we have learnt in python are:
+Basic input and output operations in Python.
+we learnt about conditional statements and different types of loops.
+the different types of data structures available in python like lists, dictionaries, tuples and sets and how to use them in real-world problems.
+the difference between the different data structures.
+how to define and use functions and pass arguments and learnt about recursions.
+object-oriented paradigms using python like inheritance, encapsulation,polymorphism and abstraction.
+defining class and initializing them using constructors.
+we learnt about exception handling.
+then we went on to learn about packages and modules.
+
