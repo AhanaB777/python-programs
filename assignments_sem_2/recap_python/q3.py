@@ -21,3 +21,20 @@ nums2 = [1,3,4,2]
 res=[]
 for i in range(0,len(nums1)):
     pass
+ans=[]
+for x in nums1:
+        # Find the index of x in nums2
+    index_in_nums2 = nums2.index(x)
+        
+        # Assume there is no next greater element
+    next_greater = -1
+        
+        # Look to the right of index_in_nums2 in nums2
+    for j in range(index_in_nums2 + 1, len(nums2)):
+        if nums2[j] > x:
+            next_greater = nums2[j]
+            break  # Stop as soon as we find the first greater element
+        
+        # Add the result for this element
+    ans.append(next_greater)
+print(ans)
